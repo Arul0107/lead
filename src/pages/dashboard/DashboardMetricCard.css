@@ -1,0 +1,113 @@
+.dashboard-metric-card {
+  border-radius: 12px; /* More rounded corners */
+  overflow: hidden; /* Important for gradients */
+  color: white; /* Text color inside the card */
+  padding: 16px; /* Adjust padding as needed */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+  min-height: 180px; /* Ensure a consistent height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dashboard-metric-card .ant-card-body {
+  padding: 0; /* Remove default Ant Card body padding if needed, or adjust it */
+  height: 100%; /* Make card body take full height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dashboard-metric-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the top */
+  margin-bottom: 15px; /* Space between header and body */
+}
+
+.dashboard-metric-card .card-title {
+  color: white !important;
+  font-weight: 600;
+  margin-bottom: 0; /* Remove default title margin */
+  line-height: 1.2;
+}
+
+.dashboard-metric-card .card-percentage {
+  text-align: right;
+}
+
+.dashboard-metric-card .trend-label {
+  color: rgba(255, 255, 255, 0.8); /* Lighter text for the label */
+  font-size: 0.9em;
+  display: block; /* Ensure it's on its own line */
+}
+
+.dashboard-metric-card .percentage-value {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: white !important; /* Make sure the percentage value is white */
+}
+
+/* You can define specific colors for positive/negative if desired */
+.dashboard-metric-card .percentage-value.positive {
+  /* color: #32CD32; Green for positive */
+}
+.dashboard-metric-card .percentage-value.negative {
+  /* color: #FF6347; Red for negative */
+}
+
+.dashboard-metric-card .card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* Align value and graph at the bottom */
+  flex-grow: 1; /* Allow the body to take available space */
+}
+
+.dashboard-metric-card .current-value .value-label {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85em;
+  display: block; /* Make it block to separate from value */
+  margin-bottom: 4px;
+}
+
+.dashboard-metric-card .current-value .value-text {
+  color: white !important;
+  font-weight: 700;
+  margin-bottom: 0; /* Remove default title margin */
+  font-size: 2.2em; /* Larger font size for the main value */
+  line-height: 1.2;
+}
+
+.dashboard-metric-card .trend-graph-container {
+  width: 50%; /* Give space for the graph */
+  height: 60px; /* Match graph height */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align graph to the right */
+}
+
+/* Ensure chart canvas takes full available space in its container */
+.dashboard-metric-card .trend-graph-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* For smaller screens, adjust column spacing */
+@media (max-width: 575.98px) {
+  .dashboard-metric-card .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dashboard-metric-card .card-percentage {
+    text-align: left;
+    margin-top: 5px;
+  }
+  .dashboard-metric-card .card-body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dashboard-metric-card .trend-graph-container {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

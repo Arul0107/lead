@@ -1,0 +1,95 @@
+/* General layout */
+.profile-container {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header with gradient and avatar */
+.profile-header {
+  width: 100%;
+  padding: 60px 20px 40px;
+  background: linear-gradient(135deg, #7b61ff, #93c2ff);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50%;
+  border: 5px solid white;
+  margin: 0 auto 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Info card section */
+.profile-info {
+  margin-top: -30px;
+  width: 90%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px 0;
+}
+
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  padding: 14px 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+  font-size: 16px;
+}
+
+/* Logout button */
+.logout-button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: #ff4d4f;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.logout-button:hover {
+  background-color: #d9363e;
+}
+
+/* Loading state */
+.loading {
+  font-size: 18px;
+  text-align: center;
+  padding: 50px;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .profile-header {
+    padding: 50px 10px 30px;
+  }
+
+  .info-card {
+    font-size: 14px;
+    padding: 12px 15px;
+  }
+
+  .logout-button {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+}

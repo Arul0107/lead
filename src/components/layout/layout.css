@@ -1,0 +1,183 @@
+/* ============================
+   Layout Wrapper Styles
+============================ */
+.main-layout {
+  min-height: 100vh;
+}
+
+/* ============================
+   Sidebar Styles
+============================ */
+.sidebar {
+  background: #fff;
+}
+
+.sidebar-logo {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+.sidebar-logo-img {
+  height: 60px;
+  width: auto;
+  transition: all 0.3s;
+}
+
+.sidebar-menu {
+  height: 100%;
+  border-right: 0;
+}
+
+/* ============================
+   Top Navbar Styles
+============================ */
+.top-navbar {
+  padding: 0;
+  background: #fff;
+}
+
+.navbar-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 64px;
+  padding: 0 16px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.menu-toggle:hover {
+  background-color: #f0f0f0;
+}
+
+/* ============================
+   Content Styles
+============================ */
+.main-content {
+  margin: 16px;
+}
+
+.inner-content {
+  padding: 24px;
+  background: #fff;
+  min-height: 360px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+/* ============================
+   Responsive Fixes
+============================ */
+@media (max-width: 768px) {
+  .navbar-wrapper {
+    padding: 0 12px;
+  }
+
+  .main-content {
+    margin: 8px;
+  }
+
+  .inner-content {
+    padding: 16px;
+  }
+
+  .sidebar-logo-img {
+    height: 32px;
+  }
+}
+
+/* layout.css */
+
+.main-layout {
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+
+/* Sidebar Styling */
+.ant-layout-sider {
+  background: #ffffff !important;
+  border-right: 1px solid #f0f0f0;
+  box-shadow: 2px 0 6px rgba(0, 21, 41, 0.05);
+  transition: all 0.3s ease-in-out;
+  /* Add z-index to ensure sidebar is above content if fixed/sticky */
+  z-index: 10;
+}
+
+/* Ensure the logo area matches the sidebar background */
+.sidebar .logo-container {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Top Navbar Styling */
+.top-navbar {
+  padding: 0 24px;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+  height: 64px;
+  line-height: 64px;
+
+  /* --- Key Changes for Sticky Header --- */
+  position: sticky; /* Make the element sticky */
+  top: 0;           /* Stick it to the top of its containing block */
+  z-index: 9;       /* Ensure it's above content but below sidebar if sidebar is also sticky/fixed */
+  width: 100%;      /* Ensure it spans full width when sticky */
+}
+
+/* Main Content Area Styling */
+.main-content {
+
+
+  background: #ffffff;
+  min-height: calc(100vh - 64px - 48px);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+  transition: all 0.3s ease-in-out;
+  overflow-x: hidden; 
+
+  min-height: calc(100vh - 64px - 48px - 64px); /* Full height - (header + content margins) - fixed header height */
+}
+
+.inner-content {
+  /* You can add padding here if needed, or let individual pages define their padding */
+}
+
+/* Optional: Adjust for smaller collapsedWidth if needed */
+.ant-layout-sider-collapsed .sidebar .logo-container {
+  padding: 0;
+}
+
+/* Optional: Adjust menu item padding for better look when collapsed if needed */
+.ant-layout-sider-collapsed .ant-menu-inline-collapsed .ant-menu-item {
+    padding: 0 24px !important;
+}
+
+
+*/
+.ant-layout-sider {
+    position: sticky; /* Make the sidebar sticky too */
+    top: 0; /* Stick it to the top */
+    height: 100vh; /* Make it take full viewport height */
+    overflow: hidden; /* Allow scrolling if content exceeds height */
+}
+
